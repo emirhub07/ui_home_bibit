@@ -24,6 +24,48 @@ class _HomePageState extends State<HomePage> {
     // Add more assets as needed
   ];
 
+
+
+  final List<RoboAssetData> roboAssetList = [
+    RoboAssetData(
+        roboAssetPath: AssetPaths.pasar,
+        roboTitle: "Pasar Uang",
+        roboSubTitle: "Majoris Pasar Uang Indonesia",
+        percent: '10'),
+    RoboAssetData(
+        roboAssetPath: AssetPaths.redCircle,
+        roboTitle: "Obligasi",
+        roboSubTitle: "Bahana MES Syariah Fund Kelas G",
+        percent: '43'),
+    RoboAssetData(
+        roboAssetPath: AssetPaths.yellowCircle,
+        roboTitle: "Saham",
+        roboSubTitle: "TRIM Syariah Saham",
+        percent: '47'),
+
+    // Add more assets as needed
+  ];
+
+  final List<ArtikelAssetData> artikelAssetData = [
+    ArtikelAssetData(
+        artikelAssetPath: AssetPaths.listImg,
+        artikelTitle: "Libur Weekend Tetap Bisa Beli SR020 di Bibit",
+        artikelSubTitle: "News",
+        ),
+    ArtikelAssetData(
+        artikelAssetPath: AssetPaths.listImg2,
+        artikelTitle: "Cari Tahu Profil Risiko Kamu dari Alokasi Aset di Portofolio",
+        artikelSubTitle: "Features",
+        ),
+    ArtikelAssetData(
+        artikelAssetPath: AssetPaths.listImg3,
+      artikelTitle: "Simulasi Imbal Hasil Kupon SR020, Dapat Gaji Tambahan hingga Rp47,9 Juta per Bulan",
+        artikelSubTitle: "Education",
+        ),
+
+    // Add more assets as needed
+  ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -95,7 +137,7 @@ class _HomePageState extends State<HomePage> {
                                     Text(
                                       'RP 2,000,000,000',
                                       style: GoogleFonts.getFont('Poppins',
-                                          fontSize: 25.sp,
+                                          fontSize: 22.sp,
                                           fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(
@@ -123,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                                           color: Theme.of(context)
                                               .colorScheme
                                               .secondary,
-                                          fontSize: 20.sp,
+                                          fontSize: 16.sp,
                                           fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(
@@ -135,7 +177,7 @@ class _HomePageState extends State<HomePage> {
                                           color: Theme.of(context)
                                               .colorScheme
                                               .primary,
-                                          fontSize: 20.sp,
+                                          fontSize: 16.sp,
                                           fontWeight: FontWeight.w500),
                                     ),
                                   ],
@@ -148,7 +190,7 @@ class _HomePageState extends State<HomePage> {
                                           color: Theme.of(context)
                                               .colorScheme
                                               .secondary,
-                                          fontSize: 20.sp,
+                                          fontSize: 16.sp,
                                           fontWeight: FontWeight.w500),
                                     ),
                                     SizedBox(
@@ -169,7 +211,7 @@ class _HomePageState extends State<HomePage> {
                                               color: Theme.of(context)
                                                   .colorScheme
                                                   .primary,
-                                              fontSize: 20.sp,
+                                              fontSize: 16.sp,
                                               fontWeight: FontWeight.w500),
                                         ),
                                       ],
@@ -260,7 +302,7 @@ class _HomePageState extends State<HomePage> {
                                                       color: Theme.of(context)
                                                           .colorScheme
                                                           .secondary,
-                                                      fontSize: 15.sp,
+                                                      fontSize: 13.sp,
                                                       fontWeight:
                                                           FontWeight.w500),
                                                 ),
@@ -268,7 +310,7 @@ class _HomePageState extends State<HomePage> {
                                                   'Rp 0',
                                                   style: GoogleFonts.getFont(
                                                       'Poppins',
-                                                      fontSize: 18.sp,
+                                                      fontSize: 15.sp,
                                                       fontWeight:
                                                           FontWeight.w500),
                                                 ),
@@ -298,7 +340,7 @@ class _HomePageState extends State<HomePage> {
                                                                       context)
                                                                   .colorScheme
                                                                   .primary,
-                                                              fontSize: 15.sp,
+                                                              fontSize: 13.sp,
                                                               fontWeight:
                                                                   FontWeight
                                                                       .w500),
@@ -332,7 +374,7 @@ class _HomePageState extends State<HomePage> {
                                                   'Portfolio',
                                                   style: GoogleFonts.getFont(
                                                       'Poppins',
-                                                      fontSize: 15.sp,
+                                                      fontSize: 12.sp,
                                                       fontWeight:
                                                           FontWeight.w300),
                                                 )
@@ -351,7 +393,7 @@ class _HomePageState extends State<HomePage> {
                                                   'Routin',
                                                   style: GoogleFonts.getFont(
                                                       'Poppins',
-                                                      fontSize: 15.sp,
+                                                      fontSize: 12.sp,
                                                       fontWeight:
                                                           FontWeight.w300),
                                                 )
@@ -370,7 +412,7 @@ class _HomePageState extends State<HomePage> {
                                                   'Refferal',
                                                   style: GoogleFonts.getFont(
                                                       'Poppins',
-                                                      fontSize: 15.sp,
+                                                      fontSize: 12.sp,
                                                       fontWeight:
                                                           FontWeight.w300),
                                                 )
@@ -389,7 +431,7 @@ class _HomePageState extends State<HomePage> {
                                                   'Lainnya',
                                                   style: GoogleFonts.getFont(
                                                       'Poppins',
-                                                      fontSize: 15.sp,
+                                                      fontSize: 12.sp,
                                                       fontWeight:
                                                           FontWeight.w300),
                                                 )
@@ -505,45 +547,42 @@ class _HomePageState extends State<HomePage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                SvgPicture.asset(
-                                  AssetPaths.institution,
-                                  height: 50.h,
-                                )
-                              ],
+                            SvgPicture.asset(
+                              AssetPaths.institution,
+                              height: 50.h,
                             ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Text(
-                                      'Mulai Investasi untuk Bisnis Kamu',
-                                      style: GoogleFonts.getFont('Poppins',
-                                          fontSize: 13.sp,
-                                          fontWeight: FontWeight.w500),
-                                    ),
-                                    SizedBox(
-                                      width: 5.w,
-                                    ),
-                                    Icon(Icons.close)
-                                  ],
-                                ),
-                                SizedBox(
-                                  height: 10.h,
-                                ),
-                                Text(
-                                  'Daftarkan perusahaan ke Bibit Bisnis\nuntuk investasi semudah di Bibit pribadi kamu.',
-                                  style: GoogleFonts.getFont('Poppins',
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .secondary,
-                                      fontSize: 8.sp,
-                                      fontWeight: FontWeight.w500),
-                                )
-                              ],
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Text(
+                                        'Mulai Investasi untuk Bisnis\n Kamu',
+                                        style: GoogleFonts.getFont('Poppins',
+                                            fontSize: 13.sp,
+                                            fontWeight: FontWeight.w500),
+                                      ),
+                                      SizedBox(
+                                        width: 5.w,
+                                      ),
+                                      Icon(Icons.close)
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    height: 10.h,
+                                  ),
+                                  Text(
+                                    'Daftarkan perusahaan ke Bibit Bisnis\nuntuk investasi semudah di Bibit pribadi kamu.',
+                                    style: GoogleFonts.getFont('Poppins',
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .secondary,
+                                        fontSize: 8.sp,
+                                        fontWeight: FontWeight.w500),
+                                  )
+                                ],
+                              ),
                             ),
                           ],
                         ),
@@ -618,7 +657,8 @@ class _HomePageState extends State<HomePage> {
                           return Padding(
                             padding: EdgeInsets.all(8.0),
                             child: Card(
-                              color: Theme.of(context).colorScheme.inversePrimary,
+                              color:
+                                  Theme.of(context).colorScheme.inversePrimary,
                               elevation: 2, // Adjust elevation as needed
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(8.r),
@@ -635,7 +675,8 @@ class _HomePageState extends State<HomePage> {
                                         ),
                                         SizedBox(width: 20.w),
                                         Column(
-                                          crossAxisAlignment: CrossAxisAlignment.start,
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
                                           children: [
                                             Text(
                                               'Modal Nyaleg 2029',
@@ -649,7 +690,9 @@ class _HomePageState extends State<HomePage> {
                                               '1 produk',
                                               style: GoogleFonts.getFont(
                                                 'Poppins',
-                                                color: Theme.of(context).colorScheme.secondary,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .secondary,
                                                 fontSize: 13.sp,
                                                 fontWeight: FontWeight.w200,
                                               ),
@@ -660,16 +703,20 @@ class _HomePageState extends State<HomePage> {
                                     ),
                                     SizedBox(height: 10.h),
                                     Row(
-                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
                                       children: [
                                         Column(
+                                          crossAxisAlignment: CrossAxisAlignment.center,
                                           children: [
                                             Text(
                                               'Investasi',
                                               style: GoogleFonts.getFont(
                                                 'Poppins',
-                                                color: Theme.of(context).colorScheme.secondary,
-                                                fontSize: 16.sp,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .secondary,
+                                                fontSize: 13.sp,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),
@@ -678,21 +725,29 @@ class _HomePageState extends State<HomePage> {
                                               'RP 1,000,000',
                                               style: GoogleFonts.getFont(
                                                 'Poppins',
-                                                color: Theme.of(context).colorScheme.primary,
-                                                fontSize: 16.sp,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .primary,
+                                                fontSize: 13.sp,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),
                                           ],
                                         ),
+                                        SizedBox(
+                                          width: 20.w,
+                                        ),
                                         Column(
+                                          crossAxisAlignment: CrossAxisAlignment.center,
                                           children: [
                                             Text(
                                               'Keuntungan',
                                               style: GoogleFonts.getFont(
                                                 'Poppins',
-                                                color: Theme.of(context).colorScheme.secondary,
-                                                fontSize: 16.sp,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .secondary,
+                                                fontSize: 13.sp,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),
@@ -701,8 +756,10 @@ class _HomePageState extends State<HomePage> {
                                               'RP 9,000,999',
                                               style: GoogleFonts.getFont(
                                                 'Poppins',
-                                                color: Theme.of(context).colorScheme.primary,
-                                                fontSize: 16.sp,
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .primary,
+                                                fontSize: 13.sp,
                                                 fontWeight: FontWeight.w500,
                                               ),
                                             ),
@@ -718,8 +775,11 @@ class _HomePageState extends State<HomePage> {
                                       height: 40.h,
                                       width: 250.w,
                                       decoration: BoxDecoration(
-                                        color: Theme.of(context).colorScheme.primary,
-                                        borderRadius: BorderRadius.circular(8.r),
+                                        color: Theme.of(context)
+                                            .colorScheme
+                                            .primary,
+                                        borderRadius:
+                                            BorderRadius.circular(8.r),
                                       ),
                                       child: Center(
                                         child: Text(
@@ -741,10 +801,486 @@ class _HomePageState extends State<HomePage> {
                         },
                       ),
                     )
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 20.h,
+              ),
+              Container(
+                color: Theme.of(context).colorScheme.inversePrimary,
+                child: Padding(
+                  padding: EdgeInsets.all(15.sp),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(children: [
+                        SvgPicture.asset(
+                          AssetPaths.robo,
+                          height: 20.h,
+                        ),
+                        SizedBox(
+                          width: 10.w,
+                        ),
+                        Text(
+                          'robo',
+                          style: GoogleFonts.getFont(
+                            'Poppins',
+                            color: Theme.of(context).colorScheme.primary,
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        )
+                      ]),
+                      SizedBox(
+                        height: 20.h,
+                      ),
+                      Text(
+                        'Mulai Siapkan Dana Pensiun Kamu',
+                        style: GoogleFonts.getFont(
+                          'Poppins',
+                          fontSize: 16.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      Text(
+                        'Langsung ikuti 3 rekomendasi reksa dana dari Robo kamu sesuai dengan profil risikomu.',
+                        style: GoogleFonts.getFont(
+                          color: Theme.of(context).colorScheme.secondary,
+                          'Poppins',
+                          fontSize: 12.sp,
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20.h,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10.r),
+                            color: Theme.of(context)
+                                .colorScheme
+                                .secondaryContainer),
+                        child: Padding(
+                          padding: EdgeInsets.all(15.sp),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              SvgPicture.asset(
+                                AssetPaths.playButton,
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Yuk Kenalan Sama Robo',
+                                    style: GoogleFonts.getFont(
+                                      color:
+                                          Theme.of(context).colorScheme.primary,
+                                      'Poppins',
+                                      fontSize: 14.sp,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                  Text(
+                                    'Bagi kamu yang mengerti Robo',
+                                    style: GoogleFonts.getFont(
+                                      color: Theme.of(context)
+                                          .colorScheme
+                                          .secondary,
+                                      'Poppins',
+                                      fontSize: 10.sp,
+                                      fontWeight: FontWeight.w300,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Icon(Icons.close)
+                            ],
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 20.h,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                            color: Theme.of(context).colorScheme.inversePrimary,
+                            borderRadius: BorderRadius.circular(12.r),
+                            border: Border.all(
+                                color:
+                                    Theme.of(context).colorScheme.secondary)),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 10.sp, vertical: 10.sp),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.symmetric(vertical: 10.sp),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        SvgPicture.asset(AssetPaths.playButton),
+                                        SizedBox(
+                                          width: 20.w,
+                                        ),
+                                        Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.start,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              'Dana Pensiun',
+                                              style: GoogleFonts.getFont(
+                                                'Poppins',
+                                                fontSize: 14.sp,
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                            Text(
+                                              'Profil Risiko: 7',
+                                              style: GoogleFonts.getFont(
+                                                color: Theme.of(context)
+                                                    .colorScheme
+                                                    .secondary,
+                                                'Poppins',
+                                                fontSize: 10.sp,
+                                                fontWeight: FontWeight.w300,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                      ],
+                                    ),
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      children: [
+                                        Text(
+                                          'ubah',
+                                          style: GoogleFonts.getFont(
+                                            color: Theme.of(context)
+                                                .colorScheme
+                                                .primary,
+                                            'Poppins',
+                                            fontSize: 14.sp,
+                                            fontWeight: FontWeight.w500,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Divider(
+                                color: Theme.of(context).colorScheme.secondary,
+                              ),
+                              ListView.builder(
+                                shrinkWrap: true,
+                                itemCount: roboAssetList.length,
+                                itemBuilder: (context, index) {
+                                  final item = roboAssetList[index];
+                                  return Padding(
+                                    padding: EdgeInsets.only(top: 10.sp),
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                          border: Border.all(
+                                              color: Colors.grey.shade100)),
+                                      child: Padding(
+                                        padding: EdgeInsets.symmetric(
+                                            vertical: 10.sp),
+                                        child: Expanded(
+                                          child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.spaceBetween,
+                                              children: [
+                                                Row(
+                                                  children: [
+                                                    SvgPicture.asset(
+                                                      item.roboAssetPath,
+                                                      height: 40.sp,
+                                                    ),
+                                                    SizedBox(
+                                                      width: 10.w,
+                                                    ),
+                                                    Column(
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        Text(
+                                                          item.roboTitle,
+                                                          style:
+                                                              GoogleFonts.getFont(
+                                                            'Poppins',
+                                                            fontSize: 14.sp,
+                                                            fontWeight:
+                                                                FontWeight.w500,
+                                                          ),
+                                                        ),
+                                                        Text(
+                                                          item.roboSubTitle,
+                                                          style:
+                                                              GoogleFonts.getFont(
+                                                            color:
+                                                                Theme.of(context)
+                                                                    .colorScheme
+                                                                    .secondary,
+                                                            'Poppins',
+                                                            fontSize: 10.sp,
+                                                            fontWeight:
+                                                                FontWeight.w300,
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                  ],
+                                                ),
+                                                Row(
+                                                  children: [
+                                                    Text(
+                                                      '${item.percent}%',
+                                                      style: GoogleFonts.getFont(
+                                                        'Poppins',
+                                                        fontSize: 12.sp,
+                                                        fontWeight:
+                                                            FontWeight.w500,
+                                                      ),
+                                                    ),
+                                                    Icon(Icons
+                                                        .arrow_forward_ios_rounded)
+                                                  ],
+                                                ),
+                                              ]),
+                                        ),
+                                      ),
+                                    ),
+                                  );
+                                },
+                              ),
+                              SizedBox(
+                                height: 20.h,
+
+                              ),
+
+                              Container(
+                                height: 40.h,
+                                width: 250.w,
+                                decoration: BoxDecoration(
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .primary,
+                                  borderRadius:
+                                  BorderRadius.circular(8.r),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    'Buat Portofolio',
+                                    style: GoogleFonts.getFont(
+                                      'Poppins',
+                                      color: Colors.white,
+                                      fontSize: 16.sp,
+                                      fontWeight: FontWeight.w500,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+
+              SizedBox(
+                height: 20.h,
+              ),
+              Container(
+                color: Theme.of(context).colorScheme.inversePrimary,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding:  EdgeInsets.all(10.sp),
+                      child: Row(children: [
+                        SvgPicture.asset(
+                          AssetPaths.promo,
+                          height: 20.h,
+                        ),
+                        SizedBox(
+                          width: 10.w,
+                        ),
+                        Text(
+                          'Promo',
+                          style: GoogleFonts.getFont(
+                            'Poppins',
+                            color: Theme.of(context).colorScheme.primary,
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        )
+                      ]),
+                    ),
+
+
+
+                    Padding(
+                      padding:  EdgeInsets.symmetric(horizontal: 10.sp),
+                      child: Text(
+                        'Promo Menarik untuk Kamu',
+                        style: GoogleFonts.getFont(
+                          'Poppins',
+                          fontSize: 14.sp,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    SizedBox(
+                      height: 150.h,
+                      child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 3,
+                        itemBuilder: (context, index) {
+                          return Card(
+                            elevation: 4,
+                            margin: EdgeInsets.all(8),
+                          shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(12.r),),
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20.r)
+                              ),
+                              height: 100,
+                              width: 300,
+                              child: Image.asset(
+                                AssetPaths.promoImage,
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          );
+                        },
+                      ),
+
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    )
+                  ],
+                ),
+              ),
+
+              SizedBox(
+                height: 20.h,
+              ),
+              Container(
+                color: Theme.of(context).colorScheme.inversePrimary,
+                child: Column(
+                  children: [
+                    Padding(
+                      padding:  EdgeInsets.all(10.sp),
+                      child: Row(children: [
+                        SvgPicture.asset(
+                          AssetPaths.promo,
+                          height: 20.h,
+                        ),
+                        SizedBox(
+                          width: 10.w,
+                        ),
+                        Text(
+                          'Promo',
+                          style: GoogleFonts.getFont(
+                            'Poppins',
+                            color: Theme.of(context).colorScheme.primary,
+                            fontSize: 16.sp,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        )
+                      ]),
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+
+                    ListView.builder(
+                      padding: EdgeInsets.zero,
+                      itemCount: artikelAssetData.length,
+                      shrinkWrap: true,
+                      itemBuilder: (context, index) {
+                        final artikel = artikelAssetData[index];
+
+                        return Container(
+                          padding: EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: 60.h,
+                                width: 60.w,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.r),
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(10.r),
+                                  child: Image.asset(
+                                    artikel.artikelAssetPath,
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
+                                width: 10.w,
+                              ),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      artikel.artikelTitle,
+                                      style: GoogleFonts.getFont(
+                                        'Poppins',
+                                        fontSize: 14.sp,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                    Text(
+                                      artikel.artikelSubTitle,
+                                      style: GoogleFonts.getFont(
+                                        'Poppins',
+                                        color: Theme.of(context).colorScheme.secondary,
+                                        fontSize: 10.sp,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        );
+                      },
+                    )
+
+
+
 
                   ],
                 ),
               )
+
             ],
           ),
         ),
@@ -758,4 +1294,31 @@ class AssetData {
   final String name;
 
   AssetData({required this.assetPath, required this.name});
+}
+
+class RoboAssetData {
+  final String roboAssetPath;
+  final String roboTitle;
+  final String roboSubTitle;
+  final String percent;
+
+  RoboAssetData({
+    required this.roboAssetPath,
+    required this.roboTitle,
+    required this.roboSubTitle,
+    required this.percent,
+  });
+}
+
+
+class ArtikelAssetData {
+  final String artikelAssetPath;
+  final String artikelTitle;
+  final String artikelSubTitle;
+
+  ArtikelAssetData({
+    required this.artikelAssetPath,
+    required this.artikelTitle,
+    required this.artikelSubTitle,
+  });
 }

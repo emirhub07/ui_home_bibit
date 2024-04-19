@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:ui_bibit_assignment/screens/app_layout.dart';
 import 'package:ui_bibit_assignment/screens/home_page.dart';
 import 'package:ui_bibit_assignment/themes/dark_mode.dart';
 import 'package:ui_bibit_assignment/themes/light_mode.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
             title: 'Flutter Demo',
             theme: lightMode,
             darkTheme: darkMode,
-            home: const HomePage(),
+            home: const AppLayout(),
           );
         });
   }
