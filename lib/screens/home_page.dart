@@ -275,172 +275,170 @@ class _HomePageState extends State<HomePage> {
                                   ],
                                 ),
                               ),
-                              Expanded(
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                      color: Theme.of(context)
-                                          .colorScheme
-                                          .inversePrimary,
-                                      borderRadius: BorderRadius.circular(10.r),
-                                      border: Border.all()),
-                                  child: Padding(
-                                    padding: EdgeInsets.all(10.sp),
-                                    child: Column(
-                                      children: [
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            Column(
-                                              crossAxisAlignment:
-                                                  CrossAxisAlignment.start,
-                                              children: [
-                                                Text(
-                                                  'RDN wallet  >',
-                                                  style: GoogleFonts.getFont(
-                                                      'Poppins',
-                                                      color: Theme.of(context)
-                                                          .colorScheme
-                                                          .secondary,
-                                                      fontSize: 13.sp,
-                                                      fontWeight:
-                                                          FontWeight.w500),
-                                                ),
-                                                Text(
-                                                  'Rp 0',
-                                                  style: GoogleFonts.getFont(
-                                                      'Poppins',
-                                                      fontSize: 15.sp,
-                                                      fontWeight:
-                                                          FontWeight.w500),
-                                                ),
-                                              ],
-                                            ),
-                                            Column(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Container(
-                                                  height: 35.h,
-                                                  width: 90.w,
-                                                  decoration: BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              20.r),
-                                                      color: Theme.of(context)
-                                                          .colorScheme
-                                                          .secondaryContainer),
-                                                  child: Center(
-                                                    child: Text(
-                                                      'Deposit',
-                                                      style:
-                                                          GoogleFonts.getFont(
-                                                              'Poppins',
-                                                              color: Theme.of(
-                                                                      context)
-                                                                  .colorScheme
-                                                                  .primary,
-                                                              fontSize: 13.sp,
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w500),
-                                                    ),
-                                                  ),
-                                                )
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                        Padding(
-                                          padding: EdgeInsets.all(10.sp),
-                                          child: Divider(
-                                            color: Colors.grey,
+                              Container(
+                                decoration: BoxDecoration(
+                                    color: Theme.of(context)
+                                        .colorScheme
+                                        .inversePrimary,
+                                    borderRadius: BorderRadius.circular(10.r),
+                                    border: Border.all()),
+                                child: Padding(
+                                  padding: EdgeInsets.all(10.sp),
+                                  child: Column(
+                                    children: [
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceBetween,
+                                        children: [
+                                          Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'RDN wallet  >',
+                                                style: GoogleFonts.getFont(
+                                                    'Poppins',
+                                                    color: Theme.of(context)
+                                                        .colorScheme
+                                                        .secondary,
+                                                    fontSize: 13.sp,
+                                                    fontWeight:
+                                                        FontWeight.w500),
+                                              ),
+                                              Text(
+                                                'Rp 0',
+                                                style: GoogleFonts.getFont(
+                                                    'Poppins',
+                                                    fontSize: 15.sp,
+                                                    fontWeight:
+                                                        FontWeight.w500),
+                                              ),
+                                            ],
                                           ),
+                                          Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            children: [
+                                              Container(
+                                                height: 35.h,
+                                                width: 90.w,
+                                                decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20.r),
+                                                    color: Theme.of(context)
+                                                        .colorScheme
+                                                        .secondaryContainer),
+                                                child: Center(
+                                                  child: Text(
+                                                    'Deposit',
+                                                    style:
+                                                        GoogleFonts.getFont(
+                                                            'Poppins',
+                                                            color: Theme.of(
+                                                                    context)
+                                                                .colorScheme
+                                                                .primary,
+                                                            fontSize: 13.sp,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w500),
+                                                  ),
+                                                ),
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                      Padding(
+                                        padding: EdgeInsets.all(10.sp),
+                                        child: Divider(
+                                          color: Colors.grey,
                                         ),
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceEvenly,
-                                          children: [
-                                            Column(
-                                              children: [
-                                                SvgPicture.asset(
-                                                  AssetPaths.portfolio,
-                                                  height: 35.h,
-                                                ),
-                                                SizedBox(
-                                                  height: 10.h,
-                                                ),
-                                                Text(
-                                                  'Portfolio',
-                                                  style: GoogleFonts.getFont(
-                                                      'Poppins',
-                                                      fontSize: 12.sp,
-                                                      fontWeight:
-                                                          FontWeight.w300),
-                                                )
-                                              ],
-                                            ),
-                                            Column(
-                                              children: [
-                                                SvgPicture.asset(
-                                                  AssetPaths.calendar,
-                                                  height: 35.h,
-                                                ),
-                                                SizedBox(
-                                                  height: 10.h,
-                                                ),
-                                                Text(
-                                                  'Routin',
-                                                  style: GoogleFonts.getFont(
-                                                      'Poppins',
-                                                      fontSize: 12.sp,
-                                                      fontWeight:
-                                                          FontWeight.w300),
-                                                )
-                                              ],
-                                            ),
-                                            Column(
-                                              children: [
-                                                SvgPicture.asset(
-                                                  AssetPaths.gift,
-                                                  height: 35.h,
-                                                ),
-                                                SizedBox(
-                                                  height: 10.h,
-                                                ),
-                                                Text(
-                                                  'Refferal',
-                                                  style: GoogleFonts.getFont(
-                                                      'Poppins',
-                                                      fontSize: 12.sp,
-                                                      fontWeight:
-                                                          FontWeight.w300),
-                                                )
-                                              ],
-                                            ),
-                                            Column(
-                                              children: [
-                                                SvgPicture.asset(
-                                                  AssetPaths.lainnya,
-                                                  height: 35.h,
-                                                ),
-                                                SizedBox(
-                                                  height: 10.h,
-                                                ),
-                                                Text(
-                                                  'Lainnya',
-                                                  style: GoogleFonts.getFont(
-                                                      'Poppins',
-                                                      fontSize: 12.sp,
-                                                      fontWeight:
-                                                          FontWeight.w300),
-                                                )
-                                              ],
-                                            )
-                                          ],
-                                        ),
-                                      ],
-                                    ),
+                                      ),
+                                      Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Column(
+                                            children: [
+                                              SvgPicture.asset(
+                                                AssetPaths.portfolio,
+                                                height: 35.h,
+                                              ),
+                                              SizedBox(
+                                                height: 10.h,
+                                              ),
+                                              Text(
+                                                'Portfolio',
+                                                style: GoogleFonts.getFont(
+                                                    'Poppins',
+                                                    fontSize: 12.sp,
+                                                    fontWeight:
+                                                        FontWeight.w300),
+                                              )
+                                            ],
+                                          ),
+                                          Column(
+                                            children: [
+                                              SvgPicture.asset(
+                                                AssetPaths.calendar,
+                                                height: 35.h,
+                                              ),
+                                              SizedBox(
+                                                height: 10.h,
+                                              ),
+                                              Text(
+                                                'Routin',
+                                                style: GoogleFonts.getFont(
+                                                    'Poppins',
+                                                    fontSize: 12.sp,
+                                                    fontWeight:
+                                                        FontWeight.w300),
+                                              )
+                                            ],
+                                          ),
+                                          Column(
+                                            children: [
+                                              SvgPicture.asset(
+                                                AssetPaths.gift,
+                                                height: 35.h,
+                                              ),
+                                              SizedBox(
+                                                height: 10.h,
+                                              ),
+                                              Text(
+                                                'Refferal',
+                                                style: GoogleFonts.getFont(
+                                                    'Poppins',
+                                                    fontSize: 12.sp,
+                                                    fontWeight:
+                                                        FontWeight.w300),
+                                              )
+                                            ],
+                                          ),
+                                          Column(
+                                            children: [
+                                              SvgPicture.asset(
+                                                AssetPaths.lainnya,
+                                                height: 35.h,
+                                              ),
+                                              SizedBox(
+                                                height: 10.h,
+                                              ),
+                                              Text(
+                                                'Lainnya',
+                                                style: GoogleFonts.getFont(
+                                                    'Poppins',
+                                                    fontSize: 12.sp,
+                                                    fontWeight:
+                                                        FontWeight.w300),
+                                              )
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ],
                                   ),
                                 ),
                               )
